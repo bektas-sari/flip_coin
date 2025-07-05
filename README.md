@@ -1,6 +1,7 @@
 # 🪙 FlipCoin - Heads or Tails Game
 
-**FlipCoin** is a modern and stylish web-based coin toss game that allows users to simulate a real-life "heads or tails" experience. Designed using only HTML, CSS, and vanilla JavaScript, the game features interactive animations, score tracking, and an engaging, colorful interface. Perfect for decision-making or casual fun!
+**FlipCoin** is a modern and stylish web-based coin toss game that allows users to simulate a real-life "heads or tails" experience. 
+Designed using only HTML, CSS, and vanilla JavaScript, the game features interactive animations, score tracking, and an engaging, colorful interface. Perfect for decision-making or casual fun!
 
 ---
 
@@ -24,15 +25,6 @@
 
 ---
 
-## 🚀 Live Demo
-
-Try it live on GitHub Pages:
-👉 [https://bektas-sari.github.io/flipcoin](https://bektas-sari.github.io/flipcoin)
-
-> *Note: Replace the link with your actual deployment URL if needed.*
-
----
-
 ## 🛠️ Technologies Used
 
 * **HTML5**: Semantic structure
@@ -53,19 +45,17 @@ Try it live on GitHub Pages:
 └── README.md          → Project documentation
 ```
 
----
-
 ## 🧪 How to Run Locally
 
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/bektas-sari/flipcoin.git
+   git clone https://github.com/bektas-sari/flip_coin.git
    ```
 2. **Navigate to the project directory**:
 
    ```bash
-   cd flipcoin
+   cd flip_coin
    ```
 3. **Launch in your browser**:
 
@@ -88,16 +78,14 @@ Pull requests and suggestions are welcome!
 ## 👤 Developer
 
 **Bektas Sari**
-📧 Email: [bektas.sari@gmail.com](mailto:bektas.sari@gmail.com)
-🐙 GitHub: [github.com/bektas-sari](https://github.com/bektas-sari)
-🔗 LinkedIn: [linkedin.com/in/bektas-sari](https://www.linkedin.com/in/bektas-sari)
-📚 ResearchGate: [Bektas Sari](https://www.researchgate.net/profile/Bektas-Sari-3)
-🎓 Academia: [Bektas Sari](https://independent.academia.edu/bektassari)
+📧 Email: [bektas.sari@gmail.com](mailto:bektas.sari@gmail.com)<br>
+🐙 GitHub: [github.com/bektas-sari](https://github.com/bektas-sari)<br>
+🔗 LinkedIn: [linkedin.com/in/bektas-sari](https://www.linkedin.com/in/bektas-sari)<br>
+📚 ResearchGate: [Bektas Sari](https://www.researchgate.net/profile/Bektas-Sari-3)<br>
+🎓 Academia: [Bektas Sari](https://independent.academia.edu/bektassari)<br>
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for full terms.
-
-> Feel free to fork this project and build upon it!
+This project is licensed under the **MIT License** 
