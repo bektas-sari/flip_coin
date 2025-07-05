@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Yazı Tura Oyunu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Dört bölmeli arka plan -->
+  <div class="background-section top-left"></div>
+  <div class="background-section top-right"></div>
+  <div class="background-section bottom-left"></div>
+  <div class="background-section bottom-right"></div>
+  
+  <div class="container">
+    <div class="header">
+      <h1 class="title">Yazı Tura Oyunu</h1>
+      <p class="subtitle">Madeni parayı döndür ve sonucu gör!</p>
+    </div>
+    
+    <div class="stats">
+      <div class="stat-box">
+        <h3>Tura</h3>
+        <div id="tura-adedi" class="stat-value">0</div>
+      </div>
+      <div class="stat-box">
+        <h3>Yazı</h3>
+        <div id="yazi-adedi" class="stat-value">0</div>
+      </div>
+    </div>
+
+    <div id="coin-container">
+      <div id="coin">
+        <div class="coin-face tura">
+          <img src="tura.png" alt="Tura" class="coin-image">
+        </div>
+        <div class="coin-face yazi">
+          <img src="yazi.png" alt="Yazı" class="coin-image">
+        </div>
+      </div>
+    </div>
+    
+    <div class="result-message" id="result-message"></div>
+
+    <div class="buttons-container">
+      <button id="flip-button">
+        <i class="fas fa-sync-alt"></i> PARAYI DÖNDÜR
+      </button>
+      <button id="reset-button">
+        <i class="fas fa-redo"></i> SIFIRLA
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

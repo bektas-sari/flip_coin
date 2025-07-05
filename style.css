@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background: #f8f9fa;
+}
+
+/* Dört bölmeli arka plan */
+.background-section {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 0;
+  transition: all 0.5s ease;
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, #00cdac 0%, #02aab0 100%);
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(135deg, #ffd26f 0%, #ffb347 100%);
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 95%;
+  max-width: 450px;
+  padding: 30px 25px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  perspective: 1000px;
+  z-index: 10;
+  position: relative;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  color: #2d3748;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #718096;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.stat-box {
+  background: rgba(245, 247, 250, 0.8);
+  padding: 15px 20px;
+  border-radius: 15px;
+  text-align: center;
+  flex: 1;
+  margin: 0 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+}
+
+.stat-box h3 {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+#coin-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  perspective: 1000px;
+}
+
+#coin {
+  height: 180px;
+  width: 180px;
+  position: relative;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.coin-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.coin-image {
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.tura {
+  transform: rotateX(0deg);
+  z-index: 2;
+}
+
+.yazi {
+  transform: rotateX(180deg);
+}
+
+/* OPTİMİZE EDİLMİŞ BUTON DÜZENİ */
+.buttons-container {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#flip-button {
+  width: 100%;
+  height: 70px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  position: relative;
+  z-index: 2;
+}
+
+#flip-button i {
+  margin-right: 15px;
+  font-size: 1.6rem;
+}
+
+#flip-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ff5a5a, #ff7a7a);
+}
+
+#flip-button:active {
+  transform: translateY(1px);
+}
+
+#reset-button {
+  position: relative;
+  width: 35%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #48dbfb, #0abde3);
+  z-index: 1;
+  margin-top: 15px;
+  align-self: flex-end;
+}
+
+#reset-button i {
+  margin-right: 8px;
+}
+
+#reset-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #3ad0f0, #09a9d1);
+}
+
+#reset-button:active {
+  transform: translateY(1px);
+}
+
+.result-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 20;
+  color: #2d3748;
+  text-align: center;
+}
+
+/* Animasyon tanımları */
+@keyframes spin-tura {
+  0% { transform: rotateX(0); }
+  100% { transform: rotateX(1980deg); }
+}
+
+@keyframes spin-yazi {
+  0% { transform: rotateX(0); }
+  100% { transform: rotateX(2160deg); }
+}
+
+.heads {
+  animation: spin-tura 2.5s cubic-bezier(0.4, 0.2, 0.2, 1) forwards;
+}
+
+.tails {
+  animation: spin-yazi 2.5s cubic-bezier(0.4, 0.2, 0.2, 1) forwards;
+}
+
+/* Responsive tasarım */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 20px 15px;
+  }
+  
+  #coin {
+    height: 150px;
+    width: 150px;
+  }
+  
+  .coin-image {
+    width: 80%;
+    height: 80%;
+  }
+  
+  #flip-button {
+    height: 60px;
+    font-size: 1.2rem;
+  }
+  
+  #reset-button {
+    height: 45px;
+    font-size: 1rem;
+    width: 40%;
+  }
+  
+  .stat-box {
+    padding: 12px 15px;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .result-message {
+    font-size: 1.3rem;
+    padding: 12px 25px;
+  }
+}
